@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dr. NEMO</title>
+<meta name="description" content="Dr. NEMO: neuroscientist turned science communicator. YouTube videos about the strange, the weird and the queer corners of biology and science.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.thisisdrnemo.com/">
+<meta property="og:title" content="Dr. NEMO">
+<meta property="og:description" content="Dr. NEMO: neuroscientist turned science communicator. YouTube videos about the strange, the weird and the queer corners of biology and science.">
+<meta property="og:image" content="https://www.thisisdrnemo.com/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+@font-face{font-family:'Rubik Mono One';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/rubik-mono-one-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Rubik Mono One';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/rubik-mono-one-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'VT323';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/vt323-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'VT323';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/vt323-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Chakra Petch';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/chakra-petch-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Chakra Petch';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/chakra-petch-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Chakra Petch';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/chakra-petch-latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Chakra Petch';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/chakra-petch-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Chakra Petch';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/chakra-petch-latin-ext-700-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Chakra Petch';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/chakra-petch-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Chakra Petch';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/chakra-petch-latin-ext-400-italic.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Chakra Petch';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/chakra-petch-latin-400-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<style>
+/* Layout: one pitch-black signal channel; sticky glitch nav, hash-routed pages, big white X triplets as separators */
+:root{
+  --void:#000000;
+  --panel:#0b0712;
+  --ink:#f3f0ff;
+  --dim:#a39cb8;
+  --magenta:#ff3ea5;
+  --cyan:#30f2ff;
+  --violet:#9b5cff;
+  --sun:#ffd84d;
+  --green:#5dff9b;
+  --line:#2a2238;
+  --f-display:"Rubik Mono One","Arial Black",Impact,sans-serif;
+  --f-body:"Chakra Petch","Segoe UI",system-ui,sans-serif;
+  --f-term:"VT323","Courier New",ui-monospace,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--void)}
+body{
+  margin:0;background:var(--void);color:var(--ink);
+  font:400 1.06rem/1.65 var(--f-body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  overflow-x:hidden;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--void)}
+/* scanlines */
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:50;
+  background:repeating-linear-gradient(to bottom,rgba(255,255,255,.035) 0 1px,transparent 1px 3px);
+  mix-blend-mode:screen;
+}
+a{color:var(--cyan)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--sun);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto}
+
+/* NAV */
+header{
+  position:sticky;top:env(safe-area-inset-top,0px);z-index:20;
+  background:rgba(0,0,0,.88);backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+  margin-left:calc(-1 * max(16px,env(safe-area-inset-left,0px)));
+  margin-right:calc(-1 * max(16px,env(safe-area-inset-right,0px)));
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:12px;max-width:1080px;margin:0 auto}
+.nav .logo{text-transform:none;letter-spacing:0;padding:0;color:var(--ink);display:inline-flex;align-items:baseline;gap:.25em;color:var(--ink);text-decoration:none;font:700 1.5rem/1 var(--f-body);text-shadow:1px 0 var(--magenta),-1px 0 var(--cyan)}
+.nav .logo b{font:400 1.3rem/1 var(--f-display);letter-spacing:.04em}
+.nav ul{order:2;margin-left:auto!important;list-style:none;display:flex;gap:4px 18px;flex-wrap:wrap;margin:0;padding:0}
+.nav a{font:1.35rem/1 var(--f-term);color:var(--dim);text-decoration:none;text-transform:uppercase;letter-spacing:.08em;padding:4px 0;display:inline-block}
+.nav a:hover{color:var(--ink)}
+.nav a[aria-current="page"]{color:var(--sun)}
+.nav a[aria-current="page"]::before{content:"> ";color:var(--magenta)}
+
+/* SEPARATOR: three big white X */
+.xxx{display:flex;justify-content:center;gap:clamp(28px,7vw,72px);padding-block:56px}
+.xxx i{width:clamp(30px,5vw,46px);aspect-ratio:1;position:relative;display:block}
+.xxx i::before,.xxx i::after{content:"";position:absolute;left:50%;top:50%;width:132%;height:clamp(12px,1.7vw,17px);background:#fff;
+  transform:translate(-50%,-50%) rotate(45deg)}
+.xxx i::after{transform:translate(-50%,-50%) rotate(-45deg)}
+.xxx.small{padding-block:28px}
+.xxx.small i{width:22px}
+.xxx.small i::before,.xxx.small i::after{height:9px}
+
+/* TYPE */
+h1,h2,h3{text-wrap:balance;margin:0}
+.glitch{font-family:var(--f-display);font-weight:400;line-height:.95;text-transform:uppercase;position:relative;
+  text-shadow:3px 0 var(--magenta),-3px 0 var(--cyan)}
+h2.glitch{font-size:clamp(2rem,6vw,3.6rem)}
+.eyebrow{font:1.3rem/1 var(--f-term);color:var(--magenta);letter-spacing:.12em;text-transform:uppercase;margin:0 0 14px}
+.lede{font-size:clamp(1.1rem,2.2vw,1.3rem);max-width:62ch;color:var(--ink)}
+p{max-width:65ch}
+.dim{color:var(--dim)}
+
+section.page{padding-block:56px 24px}
+section.page[hidden]{display:none!important}
+
+/* HOME HERO */
+.hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px;align-items:center;padding-block:40px 40px}
+.hero h1{font:400 clamp(3.2rem,12vw,8.5rem)/.86 var(--f-display);text-transform:uppercase;letter-spacing:-.01em;margin-bottom:22px}
+.hero h1 span{display:inline-block}
+.hero h1{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 .18em}
+.hero h1 .a{color:var(--ink);text-shadow:4px 0 var(--magenta),-4px 0 var(--cyan);font:700 1.12em/.86 var(--f-body);text-transform:none;letter-spacing:-.02em}
+.hero h1 .b{-webkit-text-stroke:2px var(--ink);color:transparent}
+@media (prefers-reduced-motion:no-preference){
+  .hero h1 .a{animation:jitter 4.5s steps(1) infinite}
+  @keyframes jitter{
+    0%,91%,100%{transform:none;text-shadow:4px 0 var(--magenta),-4px 0 var(--cyan)}
+    92%{transform:translateX(-6px) skewX(-8deg);text-shadow:-8px 0 var(--magenta),8px 0 var(--cyan)}
+    94%{transform:translateX(5px);clip-path:inset(20% 0 45% 0)}
+    96%{transform:translateX(-2px);clip-path:none;text-shadow:10px 0 var(--sun),-6px 0 var(--violet)}
+  }
+}
+/* retro sun */
+.sun{position:relative;aspect-ratio:1;width:100%;max-width:380px;justify-self:center}
+.sun .disc{position:absolute;inset:0;border-radius:50%;
+  background:linear-gradient(to bottom,var(--sun) 0%,#ff8a3d 38%,var(--magenta) 68%,var(--violet) 100%);
+  -webkit-mask:linear-gradient(to bottom,#000 0 56%,transparent 56% 60%,#000 60% 68%,transparent 68% 73%,#000 73% 80%,transparent 80% 86%,#000 86% 91%,transparent 91% 97%,#000 97%);
+          mask:linear-gradient(to bottom,#000 0 56%,transparent 56% 60%,#000 60% 68%,transparent 68% 73%,#000 73% 80%,transparent 80% 86%,#000 86% 91%,transparent 91% 97%,#000 97%);
+  box-shadow:0 0 80px rgba(255,62,165,.35)}
+.sun .disc{inset:-6% -10% auto auto;width:62%;aspect-ratio:1;height:auto}
+.sun .me{position:absolute;inset:6% 4% 4% 0;width:96%;height:90%;object-fit:cover;object-position:center 30%;border:2px solid #fff;
+  box-shadow:6px 6px 0 var(--magenta),-6px -6px 0 var(--cyan)}
+.sun .tag{position:absolute;left:50%;bottom:-14px;z-index:1;transform:translateX(-50%);font:1.4rem var(--f-term);background:var(--void);color:var(--cyan);padding:2px 10px;border:1px solid var(--cyan);white-space:nowrap}
+
+.stats{font-size:1.05rem;color:var(--dim);margin:18px 0 0}
+.stats b{font:400 1.7em/1 var(--f-term);color:var(--sun);font-variant-numeric:tabular-nums;padding-inline:.1em}
+.stats b.unk{color:var(--magenta)}
+.hero-side{display:grid;justify-items:center;gap:40px;min-width:0}
+.mbtn{order:3;display:grid;place-items:center;align-content:center;gap:4px;width:60px;height:52px;flex:none;border:1px solid var(--line);background:var(--void);color:var(--dim);cursor:pointer;padding:0}
+.mbtn .ml{font:.95rem/1 var(--f-term);text-transform:uppercase;letter-spacing:.04em}
+.mbtn .ms{display:flex;gap:8px;font:1.1rem/1 var(--f-term)}
+.mbtn .pl{color:var(--ink)}.mbtn .st{color:var(--line)}
+@media (max-width:760px){.mbtn{order:2;margin-left:auto}.nav ul{order:3;width:100%;margin-left:0!important}}
+.mbtn:hover{border-color:var(--cyan)}
+.mbtn.on{border-color:var(--sun);color:var(--sun)}
+.mbtn.on .pl{color:var(--line)}.mbtn.on .st{color:var(--sun)}
+.mbtn.nt .ml{color:var(--magenta)}
+.latest{display:flex;flex-direction:column;gap:14px;margin-top:24px;text-decoration:none;color:var(--ink);width:100%}
+.lt-frame{position:relative;padding:clamp(12px,3vw,32px);background:linear-gradient(135deg,var(--magenta),var(--violet) 55%,var(--cyan));display:block}
+.lt-frame::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(to bottom,rgba(0,0,0,.35) 0 2px,transparent 2px 4px);pointer-events:none}
+.lt-thumb{position:relative;z-index:1;display:grid;place-items:center;aspect-ratio:16/9;background:#000;overflow:hidden}
+.lt-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.lt-thumb .nosig{position:absolute;top:10px;left:14px;font:1.2rem var(--f-term);color:var(--dim);letter-spacing:.2em;text-transform:uppercase}
+.lt-play{position:absolute;z-index:2;width:clamp(64px,10vw,110px);height:clamp(64px,10vw,110px);display:grid;place-items:center;padding-left:6px;font:clamp(2rem,4vw,3.4rem)/1 var(--f-term);color:#000;background:var(--sun);border:3px solid #000;box-shadow:7px 7px 0 var(--magenta);transition:transform .15s}
+.latest:hover .lt-play{transform:scale(1.08)}
+.lt-txt{display:flex;flex-direction:column;gap:6px;min-width:0}
+.lt-tag{display:flex;align-items:center;gap:8px;font:1.15rem/1 var(--f-term);color:var(--magenta);text-transform:uppercase;letter-spacing:.1em}
+.lt-tag i{width:9px;height:9px;border-radius:50%;background:#ff2b4a}
+@media (prefers-reduced-motion:no-preference){.lt-tag i{animation:recb 1s steps(1) infinite}}
+.lt-txt strong{font:400 clamp(1.3rem,3.4vw,2.3rem)/1.1 var(--f-display);text-transform:uppercase}
+.lt-go{font:1.15rem var(--f-term);color:var(--cyan)}
+.latest:hover strong{color:var(--sun)}
+.socials{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{font:1.35rem/1 var(--f-term);text-transform:uppercase;letter-spacing:.08em;text-decoration:none;
+  color:var(--ink);border:1px solid var(--line);padding:10px 14px;display:inline-flex;align-items:center;gap:8px;background:var(--panel);transition:transform .12s,border-color .12s,color .12s}
+.btn:hover{border-color:var(--cyan);color:var(--cyan);transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--magenta)}
+.btn.hot{background:var(--magenta);color:#000;border-color:var(--magenta)}
+.btn.hot:hover{color:#000;box-shadow:4px 4px 0 var(--cyan)}
+
+/* three doors on home */
+.doors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.door{display:flex;flex-direction:column;gap:10px;text-decoration:none;color:var(--ink);padding:22px;border:1px solid var(--line);background:var(--panel);min-width:0}
+.door b{font:1.1rem var(--f-display);text-transform:uppercase}
+.door span{color:var(--dim)}
+.door em{font:1.3rem var(--f-term);font-style:normal;margin-top:auto}
+.door:nth-child(1) em{color:var(--magenta)}
+.door:nth-child(2) em{color:var(--cyan)}
+.door:nth-child(3) em{color:var(--sun)}
+.door:hover{border-color:currentColor}
+.door:nth-child(1):hover{border-color:var(--magenta)}
+.door:nth-child(2):hover{border-color:var(--cyan)}
+.door:nth-child(3):hover{border-color:var(--sun)}
+
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.facts h3{font:1.4rem var(--f-term);color:var(--cyan);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+.facts p{margin:0;color:var(--dim)}
+
+/* VIDEOS */
+.shelf{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:34px}
+.tape{position:relative;text-decoration:none;color:var(--ink);border:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column;min-width:0}
+.tape .screen{position:relative;padding:7%;border-bottom:1px solid var(--line);overflow:hidden}
+.tape .screen::before{content:"";position:absolute;inset:0;background:var(--g);opacity:.9}
+.tape .screen::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(to bottom,rgba(0,0,0,.35) 0 2px,transparent 2px 4px);pointer-events:none}
+.tape .thumb{position:relative;z-index:1;aspect-ratio:16/9;max-width:100%;background:#000;box-shadow:0 0 0 2px #000;overflow:hidden;display:grid;place-items:center}
+.tape .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tape .nosig{font:1.3rem var(--f-term);color:var(--dim);text-transform:uppercase;letter-spacing:.2em}
+.tape:hover .thumb img{filter:saturate(1.2) contrast(1.05)}
+.tape .meta strong:empty{display:none}
+.tape .meta{padding:14px 16px 18px;display:flex;flex-direction:column;gap:4px}
+.tape .meta small{font:1.2rem var(--f-term);color:var(--cyan);letter-spacing:.06em;text-transform:uppercase}
+.tape:hover{border-color:var(--cyan)}
+.note{font:1.2rem var(--f-term);color:var(--sun);margin-top:16px}
+
+/* PROJECTS: type-driven index; outlined names fill with color + chromatic split on hover */
+.index{list-style:none;margin:40px 0 0;padding:0;border-top:1px solid var(--line)}
+.index a{display:grid;grid-template-columns:5.5rem minmax(0,1fr) minmax(0,19rem);grid-template-areas:"kind name what" "kind name go";
+  column-gap:24px;align-items:center;padding-block:22px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);position:relative}
+.index .kind{grid-area:kind;font:1.35rem/1 var(--f-term);color:var(--c);text-transform:uppercase;letter-spacing:.1em;align-self:start;padding-top:.5em}
+.index .name{grid-area:name;font:400 clamp(1.7rem,5.2vw,3.6rem)/1 var(--f-display);text-transform:uppercase;color:transparent;
+  -webkit-text-stroke:1.5px var(--ink);transition:color .15s,text-shadow .15s,transform .15s;overflow-wrap:anywhere}
+.index .astroid{display:inline-block;width:.62em;height:.62em;margin:0 .22em;vertical-align:.08em;fill:var(--c);transition:transform .3s}
+.index a:hover .astroid{transform:rotate(45deg) scale(1.15)}
+.index .lx{font-family:var(--f-body);font-weight:700;text-transform:none;-webkit-text-stroke-width:1.5px}
+.index a.soon{cursor:default}
+.index .what{grid-area:what;color:var(--dim);font-size:.98rem;line-height:1.5}
+.index .go{grid-area:go;font:1.25rem var(--f-term);color:var(--c);align-self:end;overflow-wrap:anywhere}
+.index a:hover .name,.index a:focus-visible .name{color:var(--c);-webkit-text-stroke-color:var(--c);text-shadow:4px 0 var(--s1,var(--magenta)),-4px 0 var(--s2,var(--cyan));transform:translateX(6px)}
+.index a:hover{background:linear-gradient(90deg,transparent,rgba(255,255,255,.03))}
+.index a:hover .what{color:var(--ink)}
+@media (max-width:820px){
+  .index a{grid-template-columns:minmax(0,1fr);grid-template-areas:"kind" "name" "what" "go";row-gap:8px}
+  .index .kind{padding-top:0}
+}
+
+@keyframes recb{0%{opacity:1}50%{opacity:.15}}
+/* per-project hover animations */
+.index .ph{position:absolute;left:0;right:0;bottom:-.22em;height:3px;background:var(--line)}
+.index .ph::before{content:"";position:absolute;left:0;top:0;bottom:0;width:0;background:var(--c)}
+.index .ph i{position:absolute;left:0;top:50%;width:3px;height:.42em;transform:translate(-50%,-50%);background:var(--c);opacity:.5}
+.index .ph i::before{content:"";position:absolute;left:50%;top:-.16em;transform:translateX(-50%);border:.11em solid transparent;border-top:.14em solid var(--c);border-bottom:0}
+.index a:hover .ph i,.index a:focus-visible .ph i{opacity:1}
+@media (prefers-reduced-motion:no-preference){
+  .index a:hover .ph::before,.index a:focus-visible .ph::before{animation:scrubFill 3s linear infinite}
+  .index a:hover .ph i,.index a:focus-visible .ph i{animation:scrub 3s linear infinite}
+  @keyframes scrub{from{left:0}to{left:100%}}
+  @keyframes scrubFill{from{width:0}to{width:100%}}
+}
+@media (prefers-reduced-motion:reduce){.index a:hover .ph::before{width:40%}.index a:hover .ph i{left:40%}}
+.index .cow{display:inline-block;width:.78em;aspect-ratio:300/275;margin-left:.28em;vertical-align:-.06em;background:var(--c);
+  -webkit-mask:url("/img/mauricette-cow.png") center/contain no-repeat;mask:url("/img/mauricette-cow.png") center/contain no-repeat;transform-origin:50% 90%}
+@media (prefers-reduced-motion:no-preference){
+  .index a:hover .cow,.index a:focus-visible .cow{animation:moo .7s ease-in-out infinite}
+  @keyframes moo{0%,100%{transform:rotate(0)}25%{transform:rotate(-12deg)}75%{transform:rotate(12deg)}}
+}
+
+.index .name{position:relative;justify-self:start}
+.index .rec{display:inline-block;width:.34em;height:.34em;border-radius:50%;background:#ff2b4a;margin-left:.3em;vertical-align:.12em;opacity:.25}
+.index .lx{display:inline-block;transition:transform .6s cubic-bezier(.5,-0.4,.4,1.4),color .2s}
+.index a:hover .lx,.index a:focus-visible .lx{transform:rotate(360deg);color:#e62b1e;-webkit-text-stroke-color:#e62b1e}
+.index .eq{display:inline-flex;align-items:flex-end;gap:.07em;height:.62em;margin-left:.3em;vertical-align:0}
+.index .eq i{display:block;width:.09em;height:30%;background:var(--c)}
+.index .bubbles{display:inline-block;position:relative;width:.5em;height:.7em;margin-left:.25em;vertical-align:0}
+.index .bubbles i{position:absolute;bottom:0;border:2px solid var(--c);border-radius:50%;opacity:0}
+.index .bubbles i:nth-child(1){left:0;width:.18em;height:.18em}
+.index .bubbles i:nth-child(2){left:.24em;width:.12em;height:.12em}
+.index .bubbles i:nth-child(3){left:.08em;width:.24em;height:.24em}
+.index .card{display:inline-block;width:.44em;height:.62em;margin-left:.3em;vertical-align:.02em;fill:none;stroke:var(--c);stroke-width:2.5;transition:transform .35s cubic-bezier(.3,1.6,.5,1);transform-origin:50% 70%}
+.index a:hover .card,.index a:focus-visible .card{transform:rotate(90deg)}
+.index .thread{position:absolute;left:0;bottom:-.18em;width:100%;height:.22em;fill:none;stroke:var(--c);stroke-width:3;stroke-dasharray:100;stroke-dashoffset:100;transition:stroke-dashoffset .9s ease}
+.index a:hover .thread,.index a:focus-visible .thread{stroke-dashoffset:0}
+.index .flash a::after{content:"";position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+@media (prefers-reduced-motion:no-preference){
+  .index a:hover .rec,.index a:focus-visible .rec{animation:recb 1s steps(1) infinite}
+  @keyframes recb{0%{opacity:1}50%{opacity:.15}}
+  .index a:hover .eq i,.index a:focus-visible .eq i{animation:eq .5s ease-in-out infinite alternate}
+  .index .eq i:nth-child(2){animation-delay:-.2s!important}.index .eq i:nth-child(3){animation-delay:-.35s!important}.index .eq i:nth-child(4){animation-delay:-.1s!important}
+  @keyframes eq{from{height:20%}to{height:100%}}
+  .index a:hover .bubbles i,.index a:focus-visible .bubbles i{animation:bub 1.6s ease-in infinite}
+  .index .bubbles i:nth-child(2){animation-delay:.5s!important}.index .bubbles i:nth-child(3){animation-delay:1s!important}
+  @keyframes bub{0%{transform:translateY(0);opacity:0}20%{opacity:1}100%{transform:translateY(-1.1em);opacity:0}}
+  .index .flash a:hover::after{animation:flash .45s ease-out}
+  @keyframes flash{0%{opacity:0}12%{opacity:.85}100%{opacity:0}}
+}
+@media (prefers-reduced-motion:reduce){.index a:hover .rec{opacity:1}.index a:hover .eq i{height:70%}.index a:hover .bubbles i{opacity:1}}
+
+/* OMEN: 03:00 to 03:59 */
+.sun .evil{opacity:0;transition:none;box-shadow:6px 6px 0 #ff1f3d,-6px -6px 0 #6b00ff}
+body.omen .sun .evil{opacity:1}
+body.omen{--magenta:#ff1f3d;--cyan:#8c3cff;--sun:#ff1f3d}
+body.omen .sun .disc{filter:hue-rotate(-60deg) saturate(1.4) brightness(.6)}
+body.omen .hero h1 .b{-webkit-text-stroke-color:#ff1f3d}
+.hero.tear h1,.hero.tear .lede,.hero.tear .sun{animation:tear .09s steps(2) infinite}
+@keyframes tear{0%{transform:translateX(-9px) skewX(10deg);clip-path:inset(10% 0 55% 0);filter:hue-rotate(90deg)}50%{transform:translateX(7px);clip-path:inset(45% 0 10% 0)}100%{transform:none;clip-path:none}}
+@media (prefers-reduced-motion:reduce){.hero.tear h1,.hero.tear .lede,.hero.tear .sun{animation:none}}
+/* SUPPORT: arcade attract screen */
+.arcade{border:2px solid var(--violet);padding:clamp(20px,4vw,44px);position:relative;background:var(--void)}
+.arcade-top{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.coin{width:76px;height:76px;flex:none}
+@media (prefers-reduced-motion:no-preference){.coin{animation:spin 1.2s steps(6) infinite}@keyframes spin{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.15)}}
+  .blink{animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}}
+.blink{font:clamp(2.6rem,9vw,5.5rem)/.9 var(--f-term);color:var(--sun);margin:0;letter-spacing:.04em;text-shadow:4px 4px 0 var(--magenta)}
+.arcade-title{font:clamp(1.4rem,4vw,2.2rem)/1 var(--f-term);color:var(--ink);text-transform:uppercase;letter-spacing:.2em}
+.arcade-sub{color:var(--dim);margin:22px 0 34px}
+.arcade-head{display:flex;justify-content:space-between;font:1.3rem var(--f-term);color:var(--dim);text-transform:uppercase;letter-spacing:.2em;border-bottom:2px dashed var(--line);padding-bottom:8px;margin:0}
+.menu-list{list-style:none;margin:0;padding:0}
+.menu-list a{display:grid;grid-template-columns:1.4em auto minmax(1em,1fr) auto;grid-template-areas:"cur opt dots mode" ". hint hint hint";align-items:baseline;column-gap:12px;
+  padding-block:14px;text-decoration:none;color:var(--ink);font:clamp(1.6rem,4.6vw,2.6rem)/1 var(--f-term);text-transform:uppercase}
+.menu-list .cur{grid-area:cur;color:var(--sun);visibility:hidden}
+.menu-list .opt{grid-area:opt}
+.menu-list .dots{grid-area:dots;border-bottom:4px dotted var(--line);transform:translateY(-.2em);min-width:1em}
+.menu-list .mode{grid-area:mode}
+.menu-list .hint{grid-area:hint;font:1rem/1.4 var(--f-body);text-transform:none;color:var(--dim);margin-top:6px;max-height:0;overflow:hidden;transition:max-height .2s}
+.menu-list a:hover .cur,.menu-list a:focus-visible .cur,.menu-list li:first-child a .cur{visibility:visible}
+.menu-list a:hover .opt,.menu-list a:focus-visible .opt{color:var(--sun)}
+.menu-list a:hover .hint,.menu-list a:focus-visible .hint{max-height:4em}
+.menu-list:hover li:first-child a:not(:hover) .cur{visibility:hidden}
+@media (hover:none){.menu-list .hint{max-height:4em}}
+.p2{margin-top:44px;border:2px solid var(--cyan);padding:clamp(18px,3vw,30px);position:relative}
+.p2::before,.p2::after{content:"";position:absolute;width:12px;height:12px;background:var(--cyan)}
+.p2::before{top:-7px;left:-7px}.p2::after{bottom:-7px;right:-7px}
+.p2-tag{font:1.3rem var(--f-term);color:var(--cyan);text-transform:uppercase;letter-spacing:.14em;margin:0 0 6px}
+.p2 h3{font:400 clamp(1.5rem,4vw,2.2rem)/1 var(--f-display);text-transform:uppercase;margin-bottom:12px}
+.moves{list-style:none;padding:0;margin:18px 0 24px;display:grid;gap:8px}
+.moves b{font:400 1.3rem var(--f-term);color:var(--cyan);text-transform:uppercase;letter-spacing:.08em;margin-right:10px}
+.moves .no b{color:var(--magenta)}
+
+/* ABOUT: zine portrait, manifesto in big type, one sentence you can open word by word */
+.about-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:48px;align-items:center}
+.poster{margin:0;transform:rotate(-2deg);position:relative}
+.poster::before{content:"";position:absolute;top:-14px;left:38%;width:90px;height:26px;background:rgba(255,216,77,.75);transform:rotate(4deg);z-index:1}
+.poster img{display:block;width:100%;height:auto;border:8px solid var(--ink)}
+.manifesto{display:grid;gap:30px;max-width:46rem}
+.manifesto p{margin:0;font:600 clamp(1.15rem,2.4vw,1.45rem)/1.35 var(--f-body);color:var(--ink)}
+.manifesto em{font-style:normal;color:var(--c,var(--magenta))}
+.manifesto small{display:block;font:400 1.05rem/1.6 var(--f-body);color:var(--dim);margin-top:6px}
+.manifesto .m1{--c:var(--cyan)}
+.manifesto .m2{--c:var(--sun)}
+.manifesto .m3{--c:var(--magenta)}
+.iam-line{font:600 clamp(1.5rem,4.2vw,2.6rem)/1.4 var(--f-body);max-width:none;margin:0}
+.iam .w{font:inherit;color:var(--c);background:none;border:0;padding:0 .1em;border-bottom:3px dashed var(--c);cursor:pointer}
+.iam .w[aria-pressed="true"]{background:var(--c);color:#000;border-bottom-color:transparent}
+.iam-hint{display:inline-flex;align-items:center;gap:8px;font:1.35rem/1 var(--f-term);color:var(--sun);text-transform:lowercase;letter-spacing:.06em;margin:0 0 14px}
+.iam-hint span{font-size:.8em}
+@media (prefers-reduced-motion:no-preference){.iam-hint span{animation:nudge 1.1s ease-in-out infinite}@keyframes nudge{50%{transform:translateY(4px)}}}
+.iam-text{margin-top:24px;border-left:4px solid var(--line);padding-left:22px;min-height:7em}
+.iam-text p{margin:0;font-size:1.12rem}
+@media (max-width:820px){
+  .about-top{grid-template-columns:1fr}
+  .poster{max-width:380px}
+}
+
+/* CONTACT */
+.mailbox{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:40px;align-items:center;margin-top:34px}
+.mailrow{display:flex;flex-wrap:wrap;gap:12px;align-items:stretch;margin-top:26px}
+.addr{font:400 clamp(1.1rem,3.4vw,2rem)/1.2 var(--f-body);font-weight:700;color:var(--ink);background:var(--panel);border:1px solid var(--line);padding:14px 18px;user-select:all;overflow-wrap:anywhere;min-width:0}
+.mailrow .btn{cursor:pointer;font-size:1.5rem}
+.copied{font:1.3rem var(--f-term);color:var(--sun);min-height:1.5em;margin:10px 0 0}
+.duck{position:relative;background:none;border:0;padding:0;cursor:pointer;justify-self:center;width:min(240px,70%)}
+.duck svg{display:block;width:100%;height:auto;transform:scaleX(-1);filter:drop-shadow(5px 0 0 var(--magenta)) drop-shadow(-5px 0 0 var(--cyan))}
+.duck .mon{position:absolute;inset:0;width:100%;height:auto;opacity:0;pointer-events:none;animation:none!important;
+  transform:scaleX(-1) skewX(-3deg);overflow:visible;filter:drop-shadow(-5px 0 0 var(--violet)) drop-shadow(5px 0 0 var(--green)) drop-shadow(0 0 18px rgba(155,92,255,.6))}
+.duck.w1 #duckSvg,.duck.w2 #duckSvg{opacity:0}
+.duck.w1 .mid{opacity:1}
+.duck.w2 #monSvg{opacity:1}
+.duck .mid{transform:scaleX(-1);filter:drop-shadow(-3px 0 0 var(--violet)) drop-shadow(3px 0 0 var(--cyan))}
+.quack{position:absolute;top:2%;right:100%;left:auto;margin-right:12px;white-space:nowrap;z-index:2;font:1.6rem var(--f-term);color:#000;background:var(--sun);padding:2px 8px;opacity:0;transform:translateY(6px);transition:opacity .15s,transform .15s}
+.duck.on .quack{opacity:1;transform:none}
+@media (prefers-reduced-motion:no-preference){
+  .duck svg{animation:duckglitch 5.3s steps(1) infinite}
+  @keyframes duckglitch{
+    0%,88%,100%{transform:scaleX(-1);clip-path:none;filter:drop-shadow(5px 0 0 var(--magenta)) drop-shadow(-5px 0 0 var(--cyan))}
+    89%{transform:scaleX(-1) translateX(8px) skewX(8deg);filter:drop-shadow(-10px 0 0 var(--magenta)) drop-shadow(10px 0 0 var(--cyan))}
+    91%{transform:scaleX(-1) translateX(-6px);clip-path:inset(18% 0 48% 0)}
+    93%{transform:scaleX(-1) translateX(3px);clip-path:none;filter:drop-shadow(12px 0 0 var(--sun)) drop-shadow(-7px 0 0 var(--violet))}
+  }
+}
+@media (max-width:820px){.mailbox{grid-template-columns:1fr}.duck{width:160px}}
+
+/* 404: haunted VHS */
+.vhs{position:relative;min-height:72vh;overflow:hidden;margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding:56px max(16px,env(safe-area-inset-left,0px));background:#050508;display:grid;place-items:center}
+.vhs[hidden]{display:none!important}
+.static{position:absolute;inset:0;width:100%;height:100%;opacity:.22;image-rendering:pixelated}
+.track{position:absolute;left:0;right:0;height:18%;top:-20%;background:linear-gradient(to bottom,transparent,rgba(255,255,255,.08) 40%,rgba(255,255,255,.18) 50%,rgba(255,255,255,.08) 60%,transparent);mix-blend-mode:screen}
+.osd{position:absolute;font:clamp(1.3rem,3vw,1.9rem)/1.15 var(--f-term);color:#e8e8ff;text-shadow:2px 2px 0 #000,0 0 6px rgba(160,180,255,.6);letter-spacing:.06em;z-index:2}
+.osd-tl{top:22px;left:max(22px,env(safe-area-inset-left,0px));display:flex;gap:18px}
+.osd-tr{top:22px;right:max(22px,env(safe-area-inset-right,0px))}
+.osd-bl{bottom:22px;left:max(22px,env(safe-area-inset-left,0px))}
+.osd-br{bottom:22px;right:max(22px,env(safe-area-inset-right,0px));font-size:clamp(1rem,2.4vw,1.4rem)}
+.vhs-mid{position:relative;z-index:2;text-align:center;display:grid;justify-items:center;gap:14px}
+.vhs-err{font:1.6rem var(--f-term);color:#ff2b4a;letter-spacing:.3em;margin:0}
+.vhs-title{position:relative;font:400 clamp(2.8rem,11vw,7rem)/.9 var(--f-display);color:#e8e8ff;letter-spacing:.02em;text-shadow:-4px 0 rgba(255,0,80,.7),4px 0 rgba(0,220,255,.7)}
+.vhs-copy{font:1.5rem/1.2 var(--f-term);color:var(--dim);letter-spacing:.06em;margin:4px 0 10px}
+@media (prefers-reduced-motion:no-preference){
+  .track{animation:roll 4.5s linear infinite}
+  @keyframes roll{to{top:110%}}
+  .vhs-title{animation:wob 3.7s steps(1) infinite}
+  @keyframes wob{0%,86%,100%{transform:none;clip-path:none}87%{transform:translateX(-10px) skewX(10deg)}89%{transform:translateX(8px);clip-path:inset(30% 0 35% 0)}91%{transform:translateX(-3px);clip-path:inset(0 0 60% 0)}}
+  .blinkslow{animation:bl 1.4s steps(1) infinite}
+  .vhs-mid{animation:jit .18s steps(2) infinite}
+  @keyframes jit{50%{transform:translateY(1px)}}
+}
+@media (max-width:600px){.osd-br{display:none}}
+
+.legal-body{max-width:68ch;margin-top:26px}
+.legal-body h3{font:1.35rem/1.2 var(--f-term);color:var(--cyan);text-transform:uppercase;letter-spacing:.1em;margin:30px 0 8px}
+.legal-body p{color:var(--dim);margin:0 0 12px}
+.legal-body .addr{color:var(--ink)}
+
+footer{border-top:1px solid var(--line);margin-top:40px;padding-block:24px 40px;font:1.2rem var(--f-term);color:var(--dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;max-width:1080px;margin-inline:auto}
+footer a{color:var(--dim)}
+
+@media (max-width:820px){
+  .hero{grid-template-columns:1fr}
+  .hero-side{order:-1}
+  .sun{max-width:260px}
+  .doors,.facts,.shelf,.tiers{grid-template-columns:1fr}
+  .about-head{grid-template-columns:1fr}
+  .trait{grid-template-columns:1fr;gap:8px}
+}
+@media (min-width:821px) and (max-width:1000px){
+  .shelf,.tiers{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+</style>
+
+<header>
+  <nav class="nav" aria-label="Main">
+    <a class="logo" href="#home" aria-label="Dr. NEMO">Dr.<b>NEMO</b></a>
+    <button type="button" class="mbtn" id="playBtn" aria-pressed="false" aria-label="Play music"><span class="ml">Music</span><span class="ms"><b class="pl">▶</b><b class="st">■</b></span></button>
+    <audio id="music" preload="none" loop data-src="/music.mp3"></audio>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#support">Tip me</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="wrap">
+
+<!-- HOME -->
+<section class="page" id="p-home">
+  <div class="hero">
+    <div>
+      <p class="eyebrow" id="heroEyebrow">// signal found</p>
+      <h1 id="heroH1"><span class="a" id="heroA">Dr.</span><span class="b" id="heroB">Nemo</span></h1>
+      <p class="lede" id="heroLede">Hello there, I'm Nemo! I'm a neuroscientist turned science communicator, making YouTube videos about the strange, the weird and the queer corners of biology and science. Expect animated ideas, musical tangents and the occasional skit, all in the name of making weird knowledge stick.</p>
+      <p class="stats">To this day, I've made <b id="sVid">54</b> videos, gathered <b id="sView">276,460</b> views and <b id="sSub">8.22k</b> subscribers.</p>
+      <div class="socials">
+        <a class="btn" href="https://www.youtube.com/@thisisdrnemo" target="_blank" rel="noopener">▶ YouTube</a>
+        <a class="btn" href="https://www.instagram.com/thisisdrnemo" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn" href="https://www.tiktok.com/@thisisdrnemo" target="_blank" rel="noopener">TikTok</a>
+        <a class="btn" href="https://discord.gg/WPRXZHW" target="_blank" rel="noopener">Discord</a>
+        <a class="btn hot" href="#support">♥ Tip me</a>
+      </div>
+    </div>
+    <div class="hero-side"><div class="sun"><div class="disc" aria-hidden="true"></div><img class="me" id="meImg" src="/img/nemo.jpg" alt="Portrait of Nemo in neon light"><img class="me evil" id="evilImg" src="/img/omen.jpg" alt="" aria-hidden="true"><div class="tag" id="heroTag">PhD · YouTube · Science</div></div>
+    </div>
+  </div>
+
+  <a class="latest" id="latest" href="https://youtu.be/9G8EywA9PQI" target="_blank" rel="noopener">
+        <span class="lt-tag"><i></i>Latest upload</span><span class="lt-frame"><span class="lt-thumb"><span class="nosig">no signal</span><span class="lt-play" aria-hidden="true">▶</span><img id="ltImg" src="/thumbs/9G8EywA9PQI.jpg" alt="" onerror="this.remove()"></span></span>
+        <span class="lt-txt"><strong id="ltTitle">Fresh out of the lab</strong><span class="lt-go">watch ↗</span></span>
+      </a>
+</section>
+
+<!-- VIDEOS -->
+<section class="page" id="p-videos" hidden>
+  <p class="eyebrow">// channel 01</p>
+  <h2 class="glitch">Videos</h2>
+  <p class="lede" style="margin-top:22px">On my YouTube channel I dive into the wonderful aspects of biology, and science more broadly. But this is not just about science. It's a celebration of the strange, the weird, the queer. It's where I talk about what I love while being who I am.</p>
+  <p class="dim">Some videos I'm proud of:</p>
+
+  <div class="shelf">
+    <a class="tape" data-vid="9G8EywA9PQI" href="https://youtu.be/9G8EywA9PQI" target="_blank" rel="noopener" style="--g:linear-gradient(135deg,var(--violet),var(--cyan))">
+      <div class="screen"><div class="thumb"><span class="nosig">no signal</span><img src="/thumbs/9G8EywA9PQI.jpg" alt="" loading="lazy" onerror="this.remove()"></div></div>
+      <div class="meta"><small>What if</small><strong></strong></div>
+    </a>
+    <a class="tape" data-vid="ZU4D7b3eOwI" href="https://youtu.be/ZU4D7b3eOwI" target="_blank" rel="noopener" style="--g:linear-gradient(135deg,var(--magenta),var(--sun))">
+      <div class="screen"><div class="thumb"><span class="nosig">no signal</span><img src="/thumbs/ZU4D7b3eOwI.jpg" alt="" loading="lazy" onerror="this.remove()"></div></div>
+      <div class="meta"><small>Creature feature</small><strong></strong></div>
+    </a>
+    <a class="tape" data-vid="r8IJbUkRZ4w" href="https://youtu.be/r8IJbUkRZ4w" target="_blank" rel="noopener" style="--g:linear-gradient(135deg,var(--cyan),var(--magenta))">
+      <div class="screen"><div class="thumb"><span class="nosig">no signal</span><img src="/thumbs/r8IJbUkRZ4w.jpg" alt="" loading="lazy" onerror="this.remove()"></div></div>
+      <div class="meta"><small>Physics and psychology</small><strong></strong></div>
+    </a>
+    <a class="tape" data-vid="vlUsENLAZiw" href="https://youtu.be/vlUsENLAZiw" target="_blank" rel="noopener" style="--g:linear-gradient(135deg,var(--violet),var(--magenta))">
+      <div class="screen"><div class="thumb"><span class="nosig">no signal</span><img src="/thumbs/vlUsENLAZiw.jpg" alt="" loading="lazy" onerror="this.remove()"></div></div>
+      <div class="meta"><small>The music video</small><strong></strong></div>
+    </a>
+    <a class="tape" data-vid="I18-VQXDS3Y" href="https://youtu.be/I18-VQXDS3Y" target="_blank" rel="noopener" style="--g:linear-gradient(135deg,var(--sun),var(--cyan))">
+      <div class="screen"><div class="thumb"><span class="nosig">no signal</span><img src="/thumbs/I18-VQXDS3Y.jpg" alt="" loading="lazy" onerror="this.remove()"></div></div>
+      <div class="meta"><small>On location</small><strong>I Climbed Inside a Blue Whale</strong></div>
+    </a>
+    <a class="tape" data-vid="_lZhJma3BSI" href="https://youtu.be/_lZhJma3BSI" target="_blank" rel="noopener" style="--g:linear-gradient(135deg,#ff8a3d,var(--magenta))">
+      <div class="screen"><div class="thumb"><span class="nosig">no signal</span><img src="/thumbs/_lZhJma3BSI.jpg" alt="" loading="lazy" onerror="this.remove()"></div></div>
+      <div class="meta"><small>A bit of history</small><strong></strong></div>
+    </a>
+    <a class="tape" data-vid="vf4KhHQDM6A" href="https://youtu.be/vf4KhHQDM6A" target="_blank" rel="noopener" style="--g:linear-gradient(135deg,var(--cyan),var(--violet))">
+      <div class="screen"><div class="thumb"><span class="nosig">no signal</span><img src="/thumbs/vf4KhHQDM6A.jpg" alt="" loading="lazy" onerror="this.remove()"></div></div>
+      <div class="meta"><small>Pure biology</small><strong></strong></div>
+    </a>
+    <a class="tape" data-vid="iJxKLAja9qA" href="https://youtu.be/iJxKLAja9qA" target="_blank" rel="noopener" style="--g:linear-gradient(135deg,var(--sun),var(--magenta))">
+      <div class="screen"><div class="thumb"><span class="nosig">no signal</span><img src="/thumbs/iJxKLAja9qA.jpg" alt="" loading="lazy" onerror="this.remove()"></div></div>
+      <div class="meta"><small>Photography</small><strong></strong></div>
+    </a>
+    <a class="tape" data-vid="TY0M_iT5MKM" href="https://youtu.be/TY0M_iT5MKM" target="_blank" rel="noopener" style="--g:linear-gradient(135deg,var(--cyan),var(--magenta) 50%,var(--sun))">
+      <div class="screen"><div class="thumb"><span class="nosig">no signal</span><img src="/thumbs/TY0M_iT5MKM.jpg" alt="" loading="lazy" onerror="this.remove()"></div></div>
+      <div class="meta"><small>Experimental</small><strong></strong></div>
+    </a>
+  </div>
+
+  <p style="text-align:center;margin:40px auto 0">If you like my videos, consider <a href="#support">supporting my work</a> :)</p>
+</section>
+
+<!-- PROJECTS -->
+<section class="page" id="p-projects" hidden>
+  <p class="eyebrow">// side quests</p>
+  <h2 class="glitch">Projects</h2>
+  <p class="lede" style="margin-top:22px">The channel is the main thing. These are the other places my brain goes.</p>
+
+  <ol class="index">
+    <li style="--c:#ecc7f3"><a href="https://www.radiant-together.com" target="_blank" rel="noopener">
+      <span class="kind">Advocacy</span>
+      <span class="name">Radiant<svg class="astroid" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0C54 34 66 46 100 50C66 54 54 66 50 100C46 66 34 54 0 50C34 46 46 34 50 0Z"/></svg>Together</span>
+      <span class="what">My workplace consultancy: LGBTQ+ inclusion for workplaces that mean it. Talks, workshops and consulting across Europe.</span>
+      <span class="go">radiant-together.com ↗</span></a></li>
+    <li style="--c:#9cc77f"><a class="soon">
+      <span class="kind">Books</span>
+      <span class="name">Éditions Mauricette<span class="cow" aria-hidden="true"></span></span>
+      <span class="what">A small independent publisher of children's books about kindness, nature and love for animals. First up: Vegan from A to Z.</span>
+      <span class="go">coming soon</span></a></li>
+    <li style="--c:var(--magenta);--s1:var(--cyan);--s2:var(--sun)"><a href="https://www.youtube.com/@nemoslair" target="_blank" rel="noopener">
+      <span class="kind">Video</span>
+      <span class="name">Nemo's Lair<span class="rec" aria-hidden="true"></span></span>
+      <span class="what">My second channel. Vlogs about my personal experiences. It's a little therapeutic.</span>
+      <span class="go">youtube ↗</span></a></li>
+    <li style="--c:var(--cyan);--s1:var(--magenta);--s2:var(--sun)"><a href="https://youtu.be/ZyKd5JKJeqk" target="_blank" rel="noopener">
+      <span class="kind">Stage</span>
+      <span class="name">TED<span class="lx">x</span></span>
+      <span class="what">"Yes, You Can Be an Octopus Too!" A mix of stand-up comedy, music performance and science communication.</span>
+      <span class="go">watch ↗</span></a></li>
+    <li style="--c:var(--sun);--s1:var(--magenta);--s2:var(--cyan)"><a href="https://www.youtube.com/playlist?list=PLhbmb78BmSpnsqI6b44RfdEiCIYPUaC7h" target="_blank" rel="noopener">
+      <span class="kind">Podcast</span>
+      <span class="name">PlayHead<span class="ph" aria-hidden="true"><i></i></span></span>
+      <span class="what">A podcast with Sami from Aim by Frame about the ups and downs of our early journey on YouTube.</span>
+      <span class="go">listen ↗</span></a></li>
+    <li style="--c:var(--cyan);--s1:var(--magenta);--s2:var(--sun)"><a href="https://www.instagram.com/gladius_alters" target="_blank" rel="noopener">
+      <span class="kind">Paint</span>
+      <span class="name">MtG Alters<svg class="card" viewBox="0 0 30 42" aria-hidden="true"><rect x="2" y="2" width="26" height="38" rx="3"/><rect x="6" y="7" width="18" height="14" rx="1"/><path d="M6 27h18M6 32h12"/></svg></span>
+      <span class="what">I alter Magic cards for friends, for fun, and for the love of the game. Each one's a little spell in itself.</span>
+      <span class="go">@gladius_alters ↗</span></a></li>
+    <li style="--c:var(--magenta);--s1:var(--cyan);--s2:var(--sun)"><a href="https://www.instagram.com/cartesian.demon.tattoo" target="_blank" rel="noopener">
+      <span class="kind">Ink</span>
+      <span class="name">Tattoo<svg class="thread" viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M2 10C30 2 50 18 78 10S126 2 154 10 202 18 230 10 276 2 298 10" pathLength="100"/></svg></span>
+      <span class="what">Tattooing people close to me means a lot. It's time, trust, and something shared. My needle is a thread.</span>
+      <span class="go">@cartesian.demon.tattoo ↗</span></a></li>
+    <li class="flash" style="--c:var(--sun);--s1:var(--magenta);--s2:var(--cyan)"><a class="soon">
+      <span class="kind">Light</span>
+      <span class="name">Photography</span>
+      <span class="what">The act of capturing light. You need a way to shape it, and a way to trap it.</span>
+      <span class="go">portfolio coming soon</span></a></li>
+  </ol>
+</section>
+
+<!-- SUPPORT -->
+<section class="page" id="p-support" hidden>
+  <p class="eyebrow">// keep the signal alive</p>
+  <h2 class="glitch" style="margin-bottom:34px">Tip me</h2>
+  <div class="arcade">
+    <div class="arcade-top">
+      <svg class="coin" id="coinSvg" viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true"></svg>
+      <div>
+        <p class="blink">INSERT COIN</p>
+        <h2 class="arcade-title">to continue</h2>
+      </div>
+    </div>
+    <p class="arcade-sub">Every video takes weeks of research, writing, filming, animation and music. I'm independent, so your support goes straight into the next one.</p>
+
+    <p class="arcade-head"><span>Select</span><span>Mode</span></p>
+    <ul class="menu-list">
+      <li><a href="https://www.patreon.com/c/thisisdrnemo" target="_blank" rel="noopener"><span class="cur">▶</span><span class="opt">Patreon</span><span class="dots"></span><span class="mode" style="color:var(--magenta)">Monthly</span><span class="hint">Early access, behind the scenes, your name in the credits</span></a></li>
+      <li><a href="https://paypal.me/thisisdrnemo" target="_blank" rel="noopener"><span class="cur">▶</span><span class="opt">Tip once</span><span class="dots"></span><span class="mode" style="color:var(--sun)">1 coin</span><span class="hint">Whenever a video made your day. Oat milk, obviously.</span></a></li>
+      <li><a href="https://discord.gg/WPRXZHW" target="_blank" rel="noopener"><span class="cur">▶</span><span class="opt">Discord</span><span class="dots"></span><span class="mode" style="color:var(--cyan)">Free play</span><span class="hint">Share weird facts and vote on future videos</span></a></li>
+      <li><a href="https://www.youtube.com/@thisisdrnemo" target="_blank" rel="noopener"><span class="cur">▶</span><span class="opt">Share a video</span><span class="dots"></span><span class="mode" style="color:var(--cyan)">Free play</span><span class="hint">Send one to the friend who would love it</span></a></li>
+    </ul>
+
+    <div class="p2">
+      <p class="p2-tag">2P MODE · for brands &amp; institutions</p>
+      <h3>Sponsor a video</h3>
+      <p>I partner with organisations whose values line up with mine: science, education, sustainability, animal welfare, inclusion. Sponsorships are always labelled and never shape the science.</p>
+      <ul class="moves">
+        <li><b>Segment</b> an integrated spot inside a long-form video</li>
+        <li><b>Dedicated</b> a whole video on a topic we shape together</li>
+        <li><b>Shorts</b> cuts for Instagram and TikTok</li>
+        <li class="no"><b>Game over</b> no to animal products, fossil fuels, and anyone working against queer people</li>
+      </ul>
+      <a class="btn hot" href="#contact">Press start</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="page" id="p-about" hidden>
+  <div class="about-top">
+    <figure class="poster"><img src="/img/nemo-about.png" alt="Posterized portrait of Nemo in a café"></figure>
+    <div>
+      <p class="eyebrow">// hello world</p>
+      <h2 class="glitch">Hi,</h2>
+      <p class="lede" style="margin-top:22px">It's a little hard for me to clearly define what I do, and by extension who I am. I hope that sharing what I believe in, and how I see the world, might help.</p>
+    </div>
+  </div>
+
+  <div class="xxx" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <div class="manifesto">
+    <p class="m1">I believe <em>curiosity</em> and discovery are worth protecting,<small>especially in a world that often rewards certainty over exploration. At the same time, I preach critical thinking and scientific approaches, as crucial tools to discern the truth.</small></p>
+    <p class="m2">I believe in the importance of <em>mistakes</em>,<small>and that there is no one single way of doing something right.</small></p>
+    <p class="m3">We have been given the strange opportunity to <em>exist</em>, to feel and think.<small>I like to think of us as the Universe becoming conscious for a fleeting moment on a cosmic scale. The only thing we can do, really, is ask ourselves questions about who we are and be kind to one another. So, I believe in asking, and I believe in loving.</small></p>
+  </div>
+
+  <div class="xxx" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <div class="iam">
+    <p class="iam-hint"><span aria-hidden="true">▼</span> tap a word</p>
+    <p class="iam-line">I'm
+      <button type="button" class="w" data-k="nd" style="--c:var(--cyan)" aria-pressed="true">neurodivergent</button>,
+      <button type="button" class="w" data-k="vg" style="--c:var(--green)" aria-pressed="false">vegan</button>,
+      <button type="button" class="w" data-k="mc" style="--c:var(--sun)" aria-pressed="false">multicultural</button>,
+      <button type="button" class="w" data-k="nb" style="--c:var(--violet)" aria-pressed="false">non-binary</button>
+      and <button type="button" class="w" data-k="pa" style="--c:var(--magenta)" aria-pressed="false">polyamorous</button>.</p>
+    <div class="iam-text" id="iamText" aria-live="polite">
+      <p data-k="nd">I see patterns everywhere, pull together ideas that may seem totally unrelated, and like to talk a lot. Sometimes I get very obsessive, and I let that run wild on my channel, sharing whatever I'm hyperfixating on at the moment.</p>
+      <p data-k="vg" hidden>Becoming vegan made me question humanity's place on this planet, environmentally and ethically. We are not inherently superior to other beings, and no one deserves to die for our lifestyle, whether it's our taste buds or fashion choices. Living in a non-vegan world can feel alienating, but I've found a deep sense of peace in aligning my actions with my values and doing what I can to reduce suffering.</p>
+      <p data-k="mc" hidden>Growing up multicultural helped me realize how many things we take as "true" are shaped by a cultural lens. Facts and evidence are essential, but culture, tradition and lived experience also shape how we make sense of the world. I've never truly felt like a local, but I find beauty in belonging to many worlds at once.</p>
+      <p data-k="nb" hidden>Being non-binary makes me see the gaps, the exclusion, and the outright hostility queer people face. I fight patriarchy, I defend queer voices, and I'm not afraid to call out the TERFs and bigots along the way.</p>
+      <p data-k="pa" hidden>Because I don't believe love is containable.</p>
+    </div>
+  </div>
+</section>
+
+<!-- IMPRINT -->
+<section class="page legal" id="p-imprint" hidden>
+  <p class="eyebrow">// the fine print</p>
+  <h2 class="glitch">Imprint</h2>
+  <div class="legal-body">
+    <h3>Contact</h3>
+    <p>Information according to § 5 DDG (Digitale-Dienste-Gesetz):</p>
+    <p class="addr">Dr. NEMO<br>Owner: Mathieu D. M. Renard<br>Frankfurt am Main, Germany<br>Full postal address available soon.<br>E-mail: hello@thisisdrnemo.com<br>Web: www.thisisdrnemo.com</p>
+    <p>VAT ID according to § 27a Umsatzsteuergesetz (UStG): DE459387199</p>
+    <p>Responsible for content according to § 18 Abs. 2 MStV (Medienstaatsvertrag):<br>Mathieu D. M. Renard (address as above)</p>
+    <h3>Liability for contents</h3>
+    <p>The contents of our pages were created with the greatest care. However, we cannot guarantee the accuracy, completeness or timeliness of the contents. As a service provider we are responsible for our own content on these pages in accordance with general law. We are not obliged to monitor transmitted or stored third-party information, or to investigate circumstances that indicate illegal activity. Obligations to remove or block the use of information under general law remain unaffected. Liability in this respect is only possible from the point at which we become aware of a concrete infringement. Upon becoming aware of any such infringements, we will remove the content immediately.</p>
+    <h3>Liability for links</h3>
+    <p>Our website contains links to external third-party websites, over whose content we have no influence. We therefore cannot accept any liability for this external content. The respective provider or operator of the linked pages is always responsible for their content. The linked pages were checked for possible legal infringements at the time of linking. No illegal content was recognisable at that time. A permanent monitoring of the content of the linked pages is not reasonable without concrete evidence of an infringement. Upon becoming aware of any legal infringements, we will remove such links immediately.</p>
+    <h3>Copyright</h3>
+    <p>The content and works created by the site operator on these pages are subject to German copyright law. Duplication, processing, distribution and any form of commercialisation of such material beyond the scope of copyright law require the prior written consent of the respective author or creator. Downloads and copies of these pages are permitted only for private, non-commercial use. Insofar as the content on this site was not created by the operator, the copyright of third parties is respected. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. Upon becoming aware of any infringements, we will remove such content immediately.</p>
+  </div>
+
+  <div class="xxx small" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <h2 class="glitch">Privacy</h2>
+  <div class="legal-body">
+    <h3>General information</h3>
+    <p>The following informs you about the collection of personal data when using this website. "Personal data" means all data that can be related to you personally, such as name, email address, and usage behaviour.</p>
+    <p>We process personal data only to the extent necessary to provide a functioning website and our content. Personal data is processed only where you have given consent or where processing is permitted by law. Your personal data is deleted or blocked as soon as the purpose for storage no longer applies, unless longer retention is legally required.</p>
+    <h3>Responsible body</h3>
+    <p>The body responsible for data processing on this website (the "controller" under the GDPR) is:</p>
+    <p class="addr">Dr. NEMO<br>Owner: Mathieu D. M. Renard<br>Frankfurt am Main, Germany<br>Full postal address available soon.<br>E-mail: hello@thisisdrnemo.com<br>Web: www.thisisdrnemo.com</p>
+    <h3>Your rights</h3>
+    <p>You have the right of access, the right to rectification and erasure, the right to restrict processing, the right to object to processing, and the right to data portability. You also have the right to lodge a complaint with a data protection supervisory authority about our processing of your personal data.</p>
+    <h3>Hosting and access data (server log files)</h3>
+    <p>This website is hosted on GitHub Pages, a service provided by GitHub, Inc., USA ("GitHub"). When you visit the site, your browser automatically transmits certain technical data to GitHub's servers, which is necessary to display the site and ensure its stability and security. This may include your IP address, the date and time of the request, browser type and version, operating system, referring website and amount of data transferred. GitHub may process this data on servers outside the European Union, including in the USA, on the basis of appropriate safeguards (such as the EU-US Data Privacy Framework and standard contractual clauses). The legal basis is our legitimate interest in the secure and functional provision of our website (Art. 6(1)(f) GDPR).</p>
+    <h3>Fonts, images and media</h3>
+    <p>All fonts, images, video thumbnails and audio on this website are stored on our own hosting. No connection is made to Google Fonts, YouTube or any other third-party server when you load a page. Music only plays if you start it yourself.</p>
+    <h3>Cookies, tracking and analytics</h3>
+    <p>This website does not set cookies and does not use any tracking or analytics tools.</p>
+    <h3>External links</h3>
+    <p>This website links to external platforms such as YouTube, Instagram, TikTok, Discord, Patreon and PayPal. No data is transmitted to these platforms until you click a link. Once you follow a link, the privacy policy of the respective platform applies.</p>
+    <h3>Contact by email</h3>
+    <p>If you contact us by email (hello@thisisdrnemo.com), the data you provide (your email address and the content of your message) will be processed solely to handle your enquiry. The legal basis is our legitimate interest in responding to your enquiry (Art. 6(1)(f) GDPR), or, where your enquiry concerns a contract, Art. 6(1)(b) GDPR. You may object to the storage of your data at any time; in that case we may be unable to process your enquiry further.</p>
+    <h3>Changes to this privacy policy</h3>
+    <p>We may update this privacy policy to reflect changes to our website or legal requirements. The current version is always available on this page.</p>
+  </div>
+</section>
+
+<!-- 404 -->
+<section class="page vhs" id="p-404" hidden>
+  <canvas id="static" class="static" aria-hidden="true"></canvas>
+  <div class="track" aria-hidden="true"></div>
+  <div class="osd osd-tl" aria-hidden="true"><span class="blinkslow">▶ PLAY</span><span>SP</span></div>
+  <div class="osd osd-tr" aria-hidden="true"><span id="vhsClock">0:00:00</span></div>
+  <div class="osd osd-bl" aria-hidden="true">OCT 31 1987<br>03:33 AM</div>
+  <div class="osd osd-br" aria-hidden="true">TRACKING ▮▮▮▯▯▯▯</div>
+  <div class="vhs-mid">
+    <p class="vhs-err">ERR 404</p>
+    <h2 class="vhs-title" data-t="NO SIGNAL">NO SIGNAL</h2>
+    <p class="vhs-copy">This tape doesn't exist.<br>Or it shouldn't.</p>
+    <a class="btn" href="#home">◀◀ Rewind</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="page" id="p-contact" hidden>
+  <p class="eyebrow">// open channel</p>
+  <h2 class="glitch">Contact</h2>
+  <div class="mailbox">
+    <div>
+      <p class="lede" style="margin-top:0">Sponsorships, collaborations, press, or a weird fact you think I should know. I read everything.</p>
+      <div class="mailrow">
+        <span class="addr" id="addr">hello@thisisdrnemo.com</span>
+        <button class="btn hot" type="button" id="copyMail">Copy</button>
+      </div>
+      <p class="copied" id="copied" aria-live="polite"></p>
+    </div>
+    <button class="duck" type="button" id="duck" aria-label="Rubber duck. Click it, if you dare.">
+      <svg id="duckSvg" viewBox="0 0 16 15" shape-rendering="crispEdges" aria-hidden="true"></svg>
+      <svg id="midSvg" class="mon mid" viewBox="4 12 32 30" overflow="visible" shape-rendering="crispEdges" aria-hidden="true"></svg>
+      <svg id="monSvg" class="mon" viewBox="4 12 32 30" overflow="visible" shape-rendering="crispEdges" aria-hidden="true"></svg>
+      <span class="quack" id="quack" aria-hidden="true">QUACK</span>
+    </button>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <span>© 2026 Dr. NEMO</span>
+  <span><a href="#imprint">Imprint &amp; Privacy</a></span>
+</footer>
+
+<script>
+(function(){
+  var pages=["home","videos","projects","support","about","contact","imprint","404"];
+  function show(){
+    var h=(location.hash||(window.FORCE404?"#404":"#home")).slice(1), target=null;
+    var forceOmen=(h==="omen");if(forceOmen)h="home";
+    if(pages.indexOf(h)<0)h="404";
+    pages.forEach(function(p){document.getElementById("p-"+p).hidden=(p!==h);});
+    document.querySelectorAll(".nav ul a").forEach(function(a){
+      if(a.getAttribute("href")==="#"+h)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");
+    });
+    if(window.__vhs)window.__vhs(h==="404");
+    if(window.__omen){if(h==="home")window.__omen(forceOmen);else window.__omen(false);}
+    if(target){var el=document.getElementById(target);if(el)el.scrollIntoView();}
+    else window.scrollTo(0,0);
+  }
+  var addr=document.getElementById("addr"),msg=document.getElementById("copied");
+  document.getElementById("copyMail").addEventListener("click",function(){
+    var t=addr.textContent;
+    function sel(){var rg=document.createRange();rg.selectNodeContents(addr);var w=getSelection();w.removeAllRanges();w.addRange(rg);msg.textContent="Selected. Press Ctrl/Cmd+C to copy.";}
+    try{navigator.clipboard.writeText(t).then(function(){msg.textContent="Copied to clipboard.";},sel);}catch(e){sel();}
+  });
+  var D=["......yyyy......",".....yyyyyy.....",".....yyykyyoo...",".....yyyyyyooo..","......yyyyy.....","y......yyy......","yy....yyyyyy....","yyyyyyyyyyyyy...","yyyyywwwyyyyy...",".yyyyyywwwyyy...",".yyyyyyyyyyyd...","..dyyyyyyyydd...","...ddddddddd....","................"];
+  var C={y:"#ffd84d",d:"#e0a020",o:"#ff8a3d",k:"#000",w:"#fff1a8"},svg=document.getElementById("duckSvg"),h="";
+  D.forEach(function(row,y){for(var x=0;x<row.length;x++){var c=C[row[x]];if(c)h+='<rect x="'+x+'" y="'+y+'" width="1" height="1" fill="'+c+'"/>';}});
+  svg.innerHTML=h;
+  var M=["............................................", "............................................", "............................................", "............................................", "............................................", "...........gg...............................", "...........gk...............................", "............suu................gg...........", "..............tu.............tsgk...........", "..............su............tu..............", "...............tu...........su..............", "...............tugg.......ttu...............", ".........yyyvfffsgkffffggfsuyyy.............", ".........yyyvfffftugggggktuvyyy.............", "........yyyyyvfffstgkgkuuuvyyyyy............", "........yyyyyvfftutuffftuuvyyyyy............", "........yyyyyvfftsuufffsuuvkyyyyoooo........", ".........yyyyyvfstuuffftuukyyyyoooo.........", ".........yyyyyvfttuufttutuyyyyyoooooo.......", ".........yyyyyvftsuufttsuuyyyyyoooooo.......", "............yyyvttusutttuuyyyy..............", "............yyyvftsuttstuyyyyy..............", "yy............yvtsttttusuyyy................", ".yy............yvttutsttuyy.................", ".yyyy........yyyvttutttuyyyyyyy.............", ".yyyy........yyyvtsuztsuyyyyyyy.............", "..yyyyyyggyyyyyyyvtegeuyyyyyyyyygg..........", "..yyyyyygkyyyyyyyvfekevyyyyyyyysgk..........", "..yyyyyyytuuwwwwwvfekevttuyyyyttu...........", "..yyyyyyyysuwwwwwtsekestusttsusu............", "....yyyyyyytuyyttuuegevwwwyyytuy............", "....yyyyyyyysuysuvffffvwwwyysusu............", "....yyyyyyyyytuuuvffffvyyyttuydtu...........", "....yyyyyyyyyytsuusuetsttsuyyydt............", "......ddyyyyytuyyvffkfvyyyyyddddgg..........", "......ddyyyyytuyyvfzffvyyyyyddddgk..........", "........dddddsuddvffffvddddddd..............", "........dddddtuddvfttuuddddddd..............", ".............t.....tsuu.....................", ".............ggttsuututtstt................."];
+  var MC={y:"#4a2678",d:"#301654",o:"#7846aa",k:"#000",w:"#683ea0",f:"#0c0316",t:"#b060e6",u:"#602896",s:"#e6c8ff",e:"#f0fff0",v:"#be82ff",z:"#e6dcff",g:"#c8ff8a"},mh="";
+  M.forEach(function(row,y){for(var x=0;x<row.length;x++){var c=MC[row[x]];if(c)mh+='<rect x="'+x+'" y="'+y+'" width="1" height="1" fill="'+c+'"/>';}});
+  document.getElementById("monSvg").innerHTML=mh;
+  var MID=["............................................", "............................................", "............................................", "............................................", "............................................", "............................................", "............................................", "............................................", "............................................", "............................................", "............................................", "............................................", "............yyyvffffffvyyy..................", "............yyyvffffffvyyy..................", "..........yyyyyvffffffvyyyyy................", "..........yyyyyvfffzffvyyyyy................", "..........yyyyyvtfffffvkyyyyoooo............", "...........yyyyyvtfffvkyyyyoooo.............", "...........yyyyyvsuffvyyyyyoooooo...........", "...........yyyyyvtuffvyyyyyoooooo...........", ".............yyyvztufvsyyyy.................", ".............yyyvtsuftuyyyy.................", ".yy............yvttuftuyy...................", "..yy............yvftsuyy....................", "..yyyy........yyyvfttuyyyyyy................", "..yyyy........yyyvffvyyyyyyy................", "..yyyyyyyyyyyyyyyvffvyyyyyyyyy..............", "..yyyyyyyyyyyyyyyvffvyyyyyyyyy..............", "..yyyyyyyyyywwwwwvfgvyyyyyyyyy..............", "..yyyyyyyyyywwwwwvfkvyyyyyyyyy..............", "....yyyyyyyyyyyywvsuuwwwyyyyyy..............", "....yyyyyyyyyyyyttuttsttsyyyyy..............", "....yyyyyyyyyyyysvffvyyyyyyydd..............", "....yyyyyyyyyyyyyvffvyyyyyyydd..............", "......ddyyyyyyyyyvffvyyyyydddd..............", "......ddyyyyyyyyyvffvyyyyydddd..............", "........dddddddddvffvddddddd................", "........dddddddddvffvddddddd................", "............................................", "............................................"],MC2={y:"#ffd84d",d:"#e0a020",o:"#ff8a3d",k:"#000",w:"#fff1a8",f:"#0c0316",t:"#b060e6",u:"#602896",s:"#e6c8ff",v:"#be82ff",z:"#e6dcff",g:"#c8ff8a"},m2="";
+  MID.forEach(function(row,y){for(var x=0;x<row.length;x++){var c=MC2[row[x]];if(c)m2+='<rect x="'+x+'" y="'+y+'" width="1" height="1" fill="'+c+'"/>';}});
+  document.getElementById("midSvg").innerHTML=m2;
+  var duck=document.getElementById("duck"),tm;
+  var calm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var busy=false;
+  function transform(){
+    if(busy)return;busy=true;var q=document.getElementById("quack");
+    var seq=calm?[["w2",900],["",0]]:[["w1",120],["w2",750],["w1",110],["",0]],k=0;
+    q.textContent="QU\u0337A\u0338C\u0336K";duck.classList.add("on");
+    (function step(){duck.classList.remove("w1","w2");var st=seq[k++];if(st[0])duck.classList.add(st[0]);
+      if(st[1])setTimeout(step,st[1]);else{busy=false;setTimeout(function(){duck.classList.remove("on");q.textContent="QUACK"},300);}})();
+  }
+  duck.addEventListener("click",transform);
+  var CO=["...kkkkkk...","..kyyyyyyk..",".kyywwyyyyk.","kyywyyyyyyyk","kywyyddyyyyk","kyyyyddyyydk","kyyyyddyyydk","kyyyyddyyydk","kyyyyyyyyddk",".kyyyyyyddk.","..kddddddk..","...kkkkkk..."];
+  var CC={y:"#ffd84d",d:"#e0a020",w:"#fff7c2",k:"#3a2160"},ch="";
+  CO.forEach(function(row,y){for(var x=0;x<row.length;x++){var c=CC[row[x]];if(c)ch+='<rect x="'+x+'" y="'+y+'" width="1" height="1" fill="'+c+'"/>';}});
+  document.getElementById("coinSvg").innerHTML=ch;
+  document.querySelectorAll(".iam .w").forEach(function(b){b.addEventListener("click",function(){
+    document.querySelectorAll(".iam .w").forEach(function(x){x.setAttribute("aria-pressed",x===b)});
+    document.querySelectorAll("#iamText p").forEach(function(p){p.hidden=p.dataset.k!==b.dataset.k});
+  })});
+  fetch("/stats.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).then(function(d){
+    if(!d)return;var f=function(n){return Number(n).toLocaleString("en-US")};
+    if(d.videoCount!=null)document.getElementById("sVid").textContent=f(d.videoCount);
+    if(d.viewCount!=null)document.getElementById("sView").textContent=f(d.viewCount);
+    if(d.subscriberCount!=null)document.getElementById("sSub").textContent=(d.subscriberCount>=1000?(d.subscriberCount/1000).toFixed(2).replace(/\.?0+$/,"")+"k":d.subscriberCount);
+  }).catch(function(){});
+  var au=document.getElementById("music"),pb=document.getElementById("playBtn");
+  au.volume=0.3;
+  function setOn(on){pb.classList.toggle("on",on);pb.setAttribute("aria-pressed",on);pb.setAttribute("aria-label",on?"Stop music":"Play music");}
+  pb.addEventListener("click",function(){
+    if(pb.classList.contains("on")){au.pause();au.currentTime=0;setOn(false);return;}
+    if(!au.dataset.src){pb.classList.add("nt");setTimeout(function(){pb.classList.remove("nt")},700);return;}
+    if(!au.src)au.src=au.dataset.src;
+    au.play().then(function(){setOn(true)}).catch(function(){au.removeAttribute("src");pb.classList.add("nt");setTimeout(function(){pb.classList.remove("nt")},700);});
+  });
+  /* latest video from stats.json */
+  fetch("/stats.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).then(function(d){
+    if(!d)return;
+    if(d.titles)document.querySelectorAll(".tape[data-vid]").forEach(function(t){var x=d.titles[t.dataset.vid];if(x)t.querySelector("strong").textContent=x;});
+    if(!d.latest||!d.latest.id)return;var l=d.latest;
+    document.getElementById("latest").href="https://youtu.be/"+l.id;
+    document.getElementById("ltTitle").textContent=l.title;
+    var im=document.getElementById("ltImg");if(im)im.src="/thumbs/"+l.id+".jpg";
+  }).catch(function(){});
+  /* 404 static + clock */
+  (function(){
+    var cv=document.getElementById("static"),ctx=cv.getContext("2d"),clk=document.getElementById("vhsClock"),run=0,last=0,start=0;
+    var calmS=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function draw(){cv.width=160;cv.height=90;var im=ctx.createImageData(160,90);for(var i=0;i<im.data.length;i+=4){var v=Math.random()*255|0;im.data[i]=im.data[i+1]=im.data[i+2]=v;im.data[i+3]=255;}ctx.putImageData(im,0,0);}
+    function loop(ts){if(!run)return;if(ts-last>66){draw();last=ts;var s=Math.floor((ts-start)/1000);clk.textContent=Math.floor(s/3600)+":"+String(Math.floor(s/60)%60).padStart(2,"0")+":"+String(s%60).padStart(2,"0");}requestAnimationFrame(loop);}
+    window.__vhs=function(on){if(on&&!run){run=1;start=performance.now();draw();if(!calmS)requestAnimationFrame(loop);}else if(!on){run=0;}};
+  })();
+  /* OMEN takes over between 03:00 and 03:59 local time (or via #omen) */
+  var NEMO={eb:"// signal found",a:"Dr.",b:"Nemo",tag:"PhD · YouTube · Science",lede:document.getElementById("heroLede").innerHTML};
+  var OMEN={eb:"// signal corrupted",a:"I'm",b:"Omen",tag:"NULL · VOID · OMEN",
+    lede:"Nemo is asleep. I'm what keeps running after they log off. I lurk in the darkness of the code. I'm always watching. The signal comes back at 4:00."};
+  var omenT=0;
+  function setHero(o){document.getElementById("heroEyebrow").textContent=o.eb;document.getElementById("heroA").textContent=o.a;document.getElementById("heroB").textContent=o.b;document.getElementById("heroTag").textContent=o.tag;document.getElementById("heroLede").innerHTML=o.lede;}
+  function witching(){return new Date().getHours()===3;}
+  window.__omen=function(force){
+    clearTimeout(omenT);document.body.classList.remove("omen");setHero(NEMO);
+    if(!(force||witching()))return;
+    var hero=document.querySelector(".hero");
+    omenT=setTimeout(function(){
+      hero.classList.add("tear");
+      setTimeout(function(){document.body.classList.add("omen");setHero(OMEN);},180);
+      setTimeout(function(){hero.classList.remove("tear");},520);
+    },2600);
+  };
+  window.addEventListener("hashchange",show);
+  show();
+})();
+</script>
+</body>
+</html>
