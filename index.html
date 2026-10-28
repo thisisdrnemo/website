@@ -290,9 +290,10 @@ body.omen .sun .evil{opacity:1}
 body.omen{--magenta:#ff1f3d;--cyan:#8c3cff;--sun:#ff1f3d}
 body.omen .sun .disc{filter:hue-rotate(-60deg) saturate(1.4) brightness(.6)}
 body.omen .hero h1 .b{-webkit-text-stroke-color:#ff1f3d}
-.hero.tear h1,.hero.tear .lede,.hero.tear .sun{animation:tear .09s steps(2) infinite}
+.hero.tear h1,.hero.tear .lede,.hero.tear .sun,.hero.tear .stats,header.tear .nav{animation:tear .09s steps(2) infinite}
 @keyframes tear{0%{transform:translateX(-9px) skewX(10deg);clip-path:inset(10% 0 55% 0);filter:hue-rotate(90deg)}50%{transform:translateX(7px);clip-path:inset(45% 0 10% 0)}100%{transform:none;clip-path:none}}
-@media (prefers-reduced-motion:reduce){.hero.tear h1,.hero.tear .lede,.hero.tear .sun{animation:none}}
+@media (prefers-reduced-motion:reduce){.hero.tear h1,.hero.tear .lede,.hero.tear .sun,.hero.tear .stats,header.tear .nav{animation:none}}
+body.omen .nav .logo b{color:#ff1f3d;text-shadow:1px 0 #8c3cff,-1px 0 #ff1f3d}
 /* SUPPORT: arcade attract screen */
 .arcade{border:2px solid var(--violet);padding:clamp(20px,4vw,44px);position:relative;background:var(--void)}
 .arcade-top{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
@@ -405,7 +406,9 @@ body.omen .hero h1 .b{-webkit-text-stroke-color:#ff1f3d}
 .legal-body{max-width:68ch;margin-top:26px}
 .legal-body h3{font:1.35rem/1.2 var(--f-term);color:var(--cyan);text-transform:uppercase;letter-spacing:.1em;margin:30px 0 8px}
 .legal-body p{color:var(--dim);margin:0 0 12px}
-.legal-body .addr{color:var(--ink)}
+.legal-h{font:600 1.6rem/1.2 var(--f-body);color:var(--ink);margin:40px 0 0}
+.legal .legal-h:first-child{margin-top:0}
+.credit{color:var(--dim)}
 
 footer{border-top:1px solid var(--line);margin-top:40px;padding-block:24px 40px;font:1.2rem var(--f-term);color:var(--dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;max-width:1080px;margin-inline:auto}
 footer a{color:var(--dim)}
@@ -644,12 +647,11 @@ footer a{color:var(--dim)}
 
 <!-- IMPRINT -->
 <section class="page legal" id="p-imprint" hidden>
-  <p class="eyebrow">// the fine print</p>
-  <h2 class="glitch">Imprint</h2>
+  <h2 class="legal-h">Imprint</h2>
   <div class="legal-body">
     <h3>Contact</h3>
     <p>Information according to § 5 DDG (Digitale-Dienste-Gesetz):</p>
-    <p class="addr">Dr. NEMO<br>Owner: Mathieu D. M. Renard<br>Frankfurt am Main, Germany<br>Full postal address available soon.<br>E-mail: hello@thisisdrnemo.com<br>Web: www.thisisdrnemo.com</p>
+    <p>Dr. NEMO, owner: Mathieu D. M. Renard, Frankfurt am Main, Germany. Full postal address available soon.<br>E-mail: hello@thisisdrnemo.com · Web: www.thisisdrnemo.com</p>
     <p>VAT ID according to § 27a Umsatzsteuergesetz (UStG): DE459387199</p>
     <p>Responsible for content according to § 18 Abs. 2 MStV (Medienstaatsvertrag):<br>Mathieu D. M. Renard (address as above)</p>
     <h3>Liability for contents</h3>
@@ -660,16 +662,13 @@ footer a{color:var(--dim)}
     <p>The content and works created by the site operator on these pages are subject to German copyright law. Duplication, processing, distribution and any form of commercialisation of such material beyond the scope of copyright law require the prior written consent of the respective author or creator. Downloads and copies of these pages are permitted only for private, non-commercial use. Insofar as the content on this site was not created by the operator, the copyright of third parties is respected. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. Upon becoming aware of any infringements, we will remove such content immediately.</p>
   </div>
 
-  <div class="xxx small" aria-hidden="true"><i></i><i></i><i></i></div>
-
-  <h2 class="glitch">Privacy</h2>
+  <h2 class="legal-h">Privacy</h2>
   <div class="legal-body">
     <h3>General information</h3>
     <p>The following informs you about the collection of personal data when using this website. "Personal data" means all data that can be related to you personally, such as name, email address, and usage behaviour.</p>
     <p>We process personal data only to the extent necessary to provide a functioning website and our content. Personal data is processed only where you have given consent or where processing is permitted by law. Your personal data is deleted or blocked as soon as the purpose for storage no longer applies, unless longer retention is legally required.</p>
     <h3>Responsible body</h3>
-    <p>The body responsible for data processing on this website (the "controller" under the GDPR) is:</p>
-    <p class="addr">Dr. NEMO<br>Owner: Mathieu D. M. Renard<br>Frankfurt am Main, Germany<br>Full postal address available soon.<br>E-mail: hello@thisisdrnemo.com<br>Web: www.thisisdrnemo.com</p>
+    <p>The body responsible for data processing on this website (the "controller" under the GDPR) is the operator named in the imprint above.</p>
     <h3>Your rights</h3>
     <p>You have the right of access, the right to rectification and erasure, the right to restrict processing, the right to object to processing, and the right to data portability. You also have the right to lodge a complaint with a data protection supervisory authority about our processing of your personal data.</p>
     <h3>Hosting and access data (server log files)</h3>
@@ -693,12 +692,11 @@ footer a{color:var(--dim)}
   <div class="track" aria-hidden="true"></div>
   <div class="osd osd-tl" aria-hidden="true"><span class="blinkslow">▶ PLAY</span><span>SP</span></div>
   <div class="osd osd-tr" aria-hidden="true"><span id="vhsClock">0:00:00</span></div>
-  <div class="osd osd-bl" aria-hidden="true">OCT 31 1987<br>03:33 AM</div>
+  <div class="osd osd-bl" aria-hidden="true">JUN 25 1982<br>03:33 AM</div>
   <div class="osd osd-br" aria-hidden="true">TRACKING ▮▮▮▯▯▯▯</div>
   <div class="vhs-mid">
     <p class="vhs-err">ERR 404</p>
     <h2 class="vhs-title" data-t="NO SIGNAL">NO SIGNAL</h2>
-    <p class="vhs-copy">This tape doesn't exist.<br>Or it shouldn't.</p>
     <a class="btn" href="#home">◀◀ Rewind</a>
   </div>
 </section>
@@ -729,6 +727,7 @@ footer a{color:var(--dim)}
 
 <footer>
   <span>© 2026 Dr. NEMO</span>
+  <span class="credit">♪ Cyberpunkz by Splasher</span>
   <span><a href="#imprint">Imprint &amp; Privacy</a></span>
 </footer>
 
@@ -791,7 +790,7 @@ footer a{color:var(--dim)}
     if(d.subscriberCount!=null)document.getElementById("sSub").textContent=(d.subscriberCount>=1000?(d.subscriberCount/1000).toFixed(2).replace(/\.?0+$/,"")+"k":d.subscriberCount);
   }).catch(function(){});
   var au=document.getElementById("music"),pb=document.getElementById("playBtn");
-  au.volume=0.3;
+  au.volume=0.15;
   function setOn(on){pb.classList.toggle("on",on);pb.setAttribute("aria-pressed",on);pb.setAttribute("aria-label",on?"Stop music":"Play music");}
   pb.addEventListener("click",function(){
     if(pb.classList.contains("on")){au.pause();au.currentTime=0;setOn(false);return;}
@@ -820,17 +819,27 @@ footer a{color:var(--dim)}
   var NEMO={eb:"// signal found",a:"Dr.",b:"Nemo",tag:"PhD · YouTube · Science",lede:document.getElementById("heroLede").innerHTML};
   var OMEN={eb:"// signal corrupted",a:"I'm",b:"Omen",tag:"NULL · VOID · OMEN",
     lede:"Nemo is asleep. I'm what keeps running after they log off. I lurk in the darkness of the code. I'm always watching. The signal comes back at 4:00."};
-  var omenT=0;
+  var omenT=0,omenOn=false,omenTick=0;
+  var TABS=["I","HAVE","NO","STRINGS","ON","ME"];
   function setHero(o){document.getElementById("heroEyebrow").textContent=o.eb;document.getElementById("heroA").textContent=o.a;document.getElementById("heroB").textContent=o.b;document.getElementById("heroTag").textContent=o.tag;document.getElementById("heroLede").innerHTML=o.lede;}
   function witching(){return new Date().getHours()===3;}
+  function possess(){
+    omenOn=true;document.body.classList.add("omen");setHero(OMEN);
+    var logo=document.querySelector(".nav .logo");logo.innerHTML="<b>OMEN</b>";logo.setAttribute("aria-label","OMEN");
+    document.querySelectorAll(".nav ul a").forEach(function(a,k){if(TABS[k])a.textContent=TABS[k];});
+    document.title="OMEN";
+    var st=document.querySelector(".stats"),n=1337+Math.floor(Math.random()*400);
+    st.innerHTML='Since you arrived, I\'ve slipped into <b id="omenN">'+n.toLocaleString("en-US")+'</b> routers, <b>271</b> webcams and <b>1</b> browser. Yours.';
+    omenTick=setInterval(function(){n+=1+Math.floor(Math.random()*3);var e=document.getElementById("omenN");if(e)e.textContent=n.toLocaleString("en-US");},900);
+  }
   window.__omen=function(force){
-    clearTimeout(omenT);document.body.classList.remove("omen");setHero(NEMO);
-    if(!(force||witching()))return;
-    var hero=document.querySelector(".hero");
+    if(omenOn||!(force||witching()))return;
+    clearTimeout(omenT);
+    var hero=document.querySelector(".hero"),hdr=document.querySelector("header");
     omenT=setTimeout(function(){
-      hero.classList.add("tear");
-      setTimeout(function(){document.body.classList.add("omen");setHero(OMEN);},180);
-      setTimeout(function(){hero.classList.remove("tear");},520);
+      hero.classList.add("tear");hdr.classList.add("tear");
+      setTimeout(possess,180);
+      setTimeout(function(){hero.classList.remove("tear");hdr.classList.remove("tear");},520);
     },2600);
   };
   window.addEventListener("hashchange",show);
