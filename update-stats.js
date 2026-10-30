@@ -1,11 +1,6 @@
 // Refreshes the YouTube data shown on the site, so visitors' browsers never contact YouTube.
-// Key-free parts (always run):
-//   - latest upload: from the channel's public RSS feed
-//   - video titles:  from YouTube's public oEmbed endpoint
-//   - thumbnails:    downloaded from i.ytimg.com into /thumbs
-//   - videos / views / subscribers: read from the public About page of the channel
-// Optional (only if the YT_API_KEY secret works): exact numbers from the YouTube API.
-// If nothing works, the numbers in stats.json stay as they are, and you can edit them by hand.
+// Key-free: latest upload (RSS), titles (oEmbed), thumbnails, and numbers from the About page.
+// Optional: exact numbers from the YouTube API if the YT_API_KEY secret works.
 // Any failure only prints a warning: it never blocks the deploy.
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 
@@ -23,7 +18,7 @@ const get = async (url) => {
   return res;
 };
 
-// 1. Channel ID (needed for the RSS feed)
+// 1. Channel ID
 let channelId = stats.channelId;
 if (!channelId) {
   try {
@@ -45,7 +40,7 @@ if (channelId) {
   } catch (e) { warn('RSS feed: ' + e.message); }
 }
 
-// 3. Titles + thumbnails for the tapes (IDs read from index.html) and the latest video
+// 3. Titles + thumbnails
 const html = readFileSync('index.html', 'utf8');
 const ids = [...new Set([...html.matchAll(/data-vid="([\w-]{11})"/g)].map((m) => m[1]).concat(stats.latest?.id || []))];
 mkdirSync('thumbs', { recursive: true });
@@ -64,7 +59,7 @@ for (const id of ids) {
 }
 if (stats.latest?.id && stats.titles[stats.latest.id]) stats.latest.title = stats.titles[stats.latest.id];
 
-// 4. Numbers from the public About page (key-free). Only accepted if they look sane.
+// 4. Numbers from the public About page
 try {
   const about = (await (await get(`https://www.youtube.com/@${HANDLE}/about?hl=en&gl=US`)).text()).replace(/\\u0026/g, '&');
   const pick = (key, word) => {
@@ -79,33 +74,4 @@ try {
   if (vids && vids > 0 && vids < 10000) stats.videoCount = vids;
   if (subs && subs >= (stats.subscriberCount || 0) * 0.5) stats.subscriberCount = subs;
   console.log(`About page read: ${views} views, ${vids} videos, ${subs} subs`);
-  if (!views && !vids && !subs) warn(`About page: numbers not found (page title: ${(about.match(/<title>([^<]*)/) || [])[1]}), keeping the ones in stats.json`);
-} catch (e) { warn('About page: ' + e.message); }
-
-// 5. Optional: exact numbers from the API (overrides the above if your key ever gets quota)
-if (KEY && channelId) {
-  try {
-    const r = await get(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${channelId}&key=${KEY}`);
-    const st = (await r.json()).items[0].statistics;
-    stats.videoCount = Number(st.videoCount);
-    stats.viewCount = Number(st.viewCount);
-    if (!st.hiddenSubscriberCount) stats.subscriberCount = Number(st.subscriberCount);
-  } catch (e) { warn('Numbers not updated (API): ' + e.message); }
-}
-
-stats.updated = new Date().toISOString().slice(0, 10);
-writeFileSync('stats.json', JSON.stringify(stats, null, 2));
-console.log(`Done. Latest: "${stats.latest?.title}". Titles: ${Object.keys(stats.titles).length}. ` +
-            `Numbers: ${stats.videoCount} videos, ${stats.viewCount} views, ${stats.subscriberCount} subs.`);
-
-function toNumber(t) {
-  const m = t.replace(/\s/g, '').match(/^([\d.,]+)([KMB]?)$/i);
-  if (!m) return null;
-  const mult = { K: 1e3, M: 1e6, B: 1e9 }[m[2].toUpperCase()] || 1;
-  const n = mult > 1 ? parseFloat(m[1].replace(',', '.')) : parseFloat(m[1].replace(/[.,]/g, ''));
-  return Number.isFinite(n) ? Math.round(n * mult) : null;
-}
-
-function decode(s) {
-  return s.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'");
-}
+  if (!views && !vids && !subs) warn(`About page: numbers not found (page title: ${(about.match(/<title>([^
