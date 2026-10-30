@@ -4,7 +4,7 @@
 // Any failure only prints a warning: it never blocks the deploy.
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 
-const HANDLE = 'thisisdrnemo';
+const HANDLE = 'drnemo';
 const KEY = process.env.YT_API_KEY;
 // The consent cookie skips the EU cookie wall YouTube sometimes shows to servers.
 const UA = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36', 'Accept-Language': 'en-US,en;q=0.9', 'Cookie': 'SOCS=CAI; CONSENT=YES+cb' };
