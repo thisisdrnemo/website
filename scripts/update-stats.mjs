@@ -74,4 +74,34 @@ try {
   if (vids && vids > 0 && vids < 10000) stats.videoCount = vids;
   if (subs && subs >= (stats.subscriberCount || 0) * 0.5) stats.subscriberCount = subs;
   console.log(`About page read: ${views} views, ${vids} videos, ${subs} subs`);
-  if (!views && !vids && !subs) warn(`About page: numbers not found (page title: ${(about.match(/<title>([^
+  if (!views && !vids && !subs) warn('About page: numbers not found, keeping the ones in stats.json');
+} catch (e) { warn('About page: ' + e.message); }
+
+// 5. Optional: exact numbers from the API
+if (KEY && channelId) {
+  try {
+    const r = await get(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${channelId}&key=${KEY}`);
+    const st = (await r.json()).items[0].statistics;
+    stats.videoCount = Number(st.videoCount);
+    stats.viewCount = Number(st.viewCount);
+    if (!st.hiddenSubscriberCount) stats.subscriberCount = Number(st.subscriberCount);
+  } catch (e) { warn('Numbers not updated (API): ' + e.message); }
+}
+
+stats.updated = new Date().toISOString().slice(0, 10);
+writeFileSync('stats.json', JSON.stringify(stats, null, 2));
+console.log(`Done. Latest: "${stats.latest?.title}". Titles: ${Object.keys(stats.titles).length}. ` +
+            `Numbers: ${stats.videoCount} videos, ${stats.viewCount} views, ${stats.subscriberCount} subs.`);
+
+function toNumber(t) {
+  const m = t.replace(/\s/g, '').match(/^([\d.,]+)([KMB]?)$/i);
+  if (!m) return null;
+  const mult = { K: 1e3, M: 1e6, B: 1e9 }[m[2].toUpperCase()] || 1;
+  const n = mult > 1 ? parseFloat(m[1].replace(',', '.')) : parseFloat(m[1].replace(/[.,]/g, ''));
+  return Number.isFinite(n) ? Math.round(n * mult) : null;
+}
+
+function decode(s) {
+  return s.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'");
+}
+
